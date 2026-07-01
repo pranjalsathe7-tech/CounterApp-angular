@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Center everything */
+             body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #f5f7fa;
+    font-family: Arial, sans-serif;
+}
+
+
+
+
+/* Title */
+h1 {
+    margin: 0;
+    color: #333;
+    font-size: 2.5rem;
+}
+
+/* Counter value */
+h2 {
+    margin: 20px 0;
+    font-size: 5rem;
+    color: #2563eb;
+}
+
+/* Button container */
+div {
+    display: flex;
+    gap: 15px;
+}
+
+/* Buttons */
+button {
+    border: none;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    color: white;
+}
+.btn{
+    border: none;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    color: white;
+
+}
+
+/* + button */
+button:first-child {
+    background: #22c55e;
+}
+
+/* RESET button */
+button:nth-child(2) {
+    background: #f59e0b;
+}
+
+/* - button */
+button:last-child {
+    background: #ef4444;
+}
+
+/* Hover effect */
+button:hover {
+    transform: translateY(-3px);
+    opacity: 0.9;
+}
+
+/* Click effect */
+button:active {
+    transform: scale(0.95);
+}
+    </style>
+</head>
+
+<body>
+    <h1>Counter App</h1>
+
+    <h2 id="countid">0</h2>
+
+    <div>
+        <button onclick="inc()">+</button>
+        <button onclick="reset()">RESET</button>
+        <button onclick="dec()">-</button>
+    </div>
+    <script>
+      let count=0;
+
+      function update(){
+        document.getElementById("countid").innerText=count;
+
+      }
+
+      function inc(){
+        count++;
+        update()
+      }
+
+      function dec(){
+        count--;
+        update()
+      }
+
+      function Reset(){
+        count=0;
+        update()
+      }
+
+    </script>
+
+</body>
+</html>
